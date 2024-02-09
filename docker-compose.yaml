@@ -1,0 +1,9 @@
+services:
+    db:
+        build:
+            context: .
+            dockerfile: Dockerfile-DB
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
