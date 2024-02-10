@@ -39,7 +39,7 @@ public class RegistrationController extends HttpServlet {
         	student.setQualification(Qual);
         	student.setPercentage(Persent);
         	student.setYearPassed(Year); 
-			int status=StudentDAO.saveStudent(student);  
+		int status=StudentDAO.saveStudent(student);  
 	        if(status>0){  
 	        	response.sendRedirect("viewStudents");
 	        }else{  
