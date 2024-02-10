@@ -32,8 +32,8 @@ public class RegistrationController extends HttpServlet {
 		}
 		else
 		{
-			Student student = new Student();
-			student.setStudentName(name);
+		Student student = new Student();
+		student.setStudentName(name);
         	student.setStudentAddr(Addr);
         	student.setAge(age);
         	student.setQualification(Qual);
