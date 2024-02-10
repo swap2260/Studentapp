@@ -1,0 +1,17 @@
+version: '3'
+services:
+    mysqldb:
+        image: docker.io/satish736/mysql:latest
+        restart: always
+        environment:
+            MYSQL_DATABASE: studentapp
+            MYSQL_ROOT_PASSWORD: satish
+        ports:
+            - 3306:3306
+    web-app:
+        image: 
+            docker.io/satish736/abc:latest
+        ports:
+            - "8090:8080"
+        depends_on:
+            - mysqldb
