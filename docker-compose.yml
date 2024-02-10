@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8090:8080"
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3307/users_db?useSSL=false&serverTimezone=UTC
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: satish
+
+  db:
+    image: docker.io/satish736/mysql:latest
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: studentapp
+      MYSQL_USER: root
+      MYSQL_PASSWORD: satish
+      MYSQL_ROOT_PASSWORD: satish
