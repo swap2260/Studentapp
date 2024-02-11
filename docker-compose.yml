@@ -11,5 +11,9 @@ services:
     web-app:
         image: 
             docker.io/satish736/abc:latest
+         environment:
+            MYSQL_DATABASE: studentapp
+            MYSQL_ROOT_PASSWORD: satish
+            MYSQL_ROOT_USER: root
         ports:
             - "8090:8080"
