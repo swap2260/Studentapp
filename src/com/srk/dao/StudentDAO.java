@@ -12,23 +12,23 @@ import javax.sql.DataSource;
 import vo.Student;
 
 public class StudentDAO {
-    public static Connection getConnection(){  
+   /* public static Connection getConnection(){  
         Connection con=null;  
         try{  
             Class.forName("com.mysql.cj.jdbc.Driver");  
             con=DriverManager.getConnection("jdbc:mysql://localhost:3306/testdb","root","root");  
         }catch(Exception e){System.out.println(e);}  
         return con;  
-    }
+    } */
 	
-	/* public static Connection getConnection() throws Exception {
+	 public static Connection getConnection() throws Exception {
 		Connection conn=null;
 		Context initContext = new InitialContext();
 		Context envContext = (Context) initContext.lookup("java:comp/env");
 		DataSource ds = (DataSource) envContext.lookup("jdbc/TestDB");
 		conn = ds.getConnection();
 		return conn; 
-	} */
+	} 
 	public static void main(String[] args) {
 		
 	}
